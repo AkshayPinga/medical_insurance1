@@ -6,8 +6,10 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_flask():
-    print("welcome to flask")
+    
     return "Success"
+
+    print("welcome to flask")
 
 @app.route('/addition')
 
@@ -15,6 +17,7 @@ def add():
     x=100
     y=200
     result=calculation.get_addition(x,y)
+    #return jsonify({"result": f"addition of {x} and {y} is {result}"})
     return jsonify({"result": f"addition of {x} and {y} is {result}"})
 
 
